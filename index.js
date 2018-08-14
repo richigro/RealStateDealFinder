@@ -3,7 +3,7 @@ const url = "https://www.zillow.com/webservice/GetRegionChildren.htm";
 
 function getDataFromApi(userSearch, callback){
     const query = {
-        "zwd-id": apiKey,
+        'zws-id': apiKey,
         state: userSearch
     };
 
@@ -18,8 +18,9 @@ function printResult(data) {
 
  function appInstance(){
      // run fucntions
-    const search = "" 
-    getDataFromApi();
+    const search = $(".js-input").val();
+    $(".js-input").val();
+    getDataFromApi(search, printResult);
  }
 
  $(appInstance);
