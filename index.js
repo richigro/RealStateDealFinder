@@ -13,7 +13,8 @@ function getDataFromApi(userSearch, callback){
 }
 
 function printResult(data) {
-    console.log(data);
+    let parsedData = xml2json(data);
+    console.log(parsedData);
 }
 
  function appInstance(){
