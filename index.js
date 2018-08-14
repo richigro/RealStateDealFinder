@@ -7,10 +7,11 @@ console.log(corsEnabledUrl);
 function getDataFromApi(userSearch, callback){
     $.ajax({
         type: "GET",
-        url: url,
+        url: corsEnabledUrl,
         data: `{'zwa-id': ${apiKey}, state: ${userSearch}, Limit-warning : ${true} }`, 
         dataType: "xml",
-        success: callback(data)
+        success: callback(data),
+        error: callback(data)
     });
 }
 
