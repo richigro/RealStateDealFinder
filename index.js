@@ -14,7 +14,7 @@ function getDataFromApi(userSearch, callback){
         type: "GET",
         beforeSend: setHeader(),
         url: corsEnabledUrl,
-        // data: `{'zwa-id': ${apiKey}, state: ${userSearch}, Limit-warning : ${true} }`, 
+        data: `{'zwa-id': ${apiKey}, state: ${userSearch}, Limit-warning : ${true} }`, 
         dataType: "xml",
         success: callback(data),
         error: callback(data)
