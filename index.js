@@ -1,5 +1,8 @@
 const apiKey = "X1-ZWz1gl3l1q9s7f_8nu8h";
-const url = "https://www.zillow.com/webservice/GetRegionChildren.htm";
+const zillowUrl = "https://www.zillow.com/webservice/GetRegionChildren.htm";
+const corsProxy = "https://crossorigin.me/";
+const corsEnabledUrl = `${corsProxy}${zillowUrl}`;
+console.log(corsEnabledUrl);
 
 function getDataFromApi(userSearch, callback){
     $.ajax({
