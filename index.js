@@ -8,7 +8,7 @@ function getDataFromApi(userSearch, callback){
     $.ajax({
         type: "GET",
         url: url,
-        data:`{'zwa-id': ${apiKey}, state: ${userSearch}, Limit-warning : ${true} }`, 
+        data: `{'zwa-id': ${apiKey}, state: ${userSearch}, Limit-warning : ${true} }`, 
         dataType: "xml",
         success: callback(data)
     });
